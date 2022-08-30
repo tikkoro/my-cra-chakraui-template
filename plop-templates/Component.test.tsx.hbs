@@ -1,0 +1,11 @@
+import '@testing-library/jest-dom';
+import { fireEvent, render, screen } from '@testing-library/react';
+
+import {{ properCase name }} from './{{ properCase name }}';
+
+describe('{{ properCase name }}コンポーネント', () => {
+    test('指定したテキストが描画されている', () => {
+        render(<{{ properCase name }} sample="sample" />);
+        expect(screen.getByText('sample')).toBeInTheDocument();
+    });
+});

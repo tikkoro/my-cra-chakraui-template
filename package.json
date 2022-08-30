@@ -1,0 +1,125 @@
+{
+    "name": "cra-chakraui-template",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@chakra-ui/react": "^2.2.8",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
+        "axios": "^0.27.2",
+        "framer-motion": "^7",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.34.2",
+        "react-icons": "^4.4.0",
+        "react-router-dom": "^6.3.0",
+        "react-use": "^17.4.0",
+        "recoil": "^0.7.5",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.5.10",
+        "@storybook/addon-essentials": "^6.5.10",
+        "@storybook/addon-interactions": "^6.5.10",
+        "@storybook/addon-links": "^6.5.10",
+        "@storybook/builder-webpack5": "^6.5.10",
+        "@storybook/manager-webpack5": "^6.5.10",
+        "@storybook/node-logger": "^6.5.10",
+        "@storybook/preset-create-react-app": "^4.1.2",
+        "@storybook/react": "^6.5.10",
+        "@storybook/testing-library": "^0.0.13",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.3.0",
+        "@testing-library/user-event": "^14.4.3",
+        "@types/eslint": "^8.4.6",
+        "@types/jest": "^28.1.7",
+        "@types/node": "^18.7.12",
+        "@types/prettier": "^2.7.0",
+        "@types/prop-types": "^15.7.5",
+        "@types/react": "^18.0.17",
+        "@types/react-dom": "^18.0.6",
+        "@types/testing-library__jest-dom": "^5.14.5",
+        "@typescript-eslint/eslint-plugin": "5.33.0",
+        "@typescript-eslint/parser": "^5.34.0",
+        "babel-plugin-named-exports-order": "^0.0.2",
+        "eslint": "^8.22.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-react": "^7.30.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-storybook": "^0.6.4",
+        "eslint-plugin-testing-library": "^5.6.0",
+        "jest": "^28.1.3",
+        "jest-environment-jsdom": "^28.1.3",
+        "plop": "^3.1.1",
+        "prettier": "^2.7.1",
+        "prop-types": "^15.8.1",
+        "react-scripts": "^5.0.1",
+        "simple-git-hooks": "^2.8.0",
+        "storybook-addon-performance": "^0.16.1",
+        "ts-jest": "^28.0.8",
+        "tsconfig-paths-webpack-plugin": "^4.0.0",
+        "typescript": "*",
+        "webpack": "^5.74.0",
+        "worker-loader": "^3.0.8"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "jest --config ./jest.config.json",
+        "test:watch": "npm run test -- --watch",
+        "eject": "react-scripts eject",
+        "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+        "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
+        "lint:conflict": "eslint-config-prettier src/**/*.{js,jsx,ts,tsx}",
+        "preinstall": "typesync || :",
+        "prepare": "npx simple-git-hooks",
+        "storybook": "start-storybook -p 6006 -s public",
+        "build-storybook": "build-storybook -s public",
+        "scaffold": "plop"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ],
+        "overrides": [
+            {
+                "files": [
+                    "**/*.stories.*"
+                ],
+                "rules": {
+                    "import/no-anonymous-default-export": "off"
+                }
+            }
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "simple-git-hooks": {
+        "pre-commit": "npx lint-staged"
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx}": [
+            "prettier --write --loglevel=error",
+            "eslint --fix --quiet"
+        ],
+        "{public,src}/**/*.{html,gql,graphql,json}": [
+            "prettier --write --loglevel=error"
+        ]
+    }
+}

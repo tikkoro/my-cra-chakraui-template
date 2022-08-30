@@ -1,0 +1,9 @@
+build/
+**/coverage/
+**/node_modules/
+**/*.min.js
+*.config.js
+.*lintrc.js
+main.ts
+preview.ts
+plopfile.mjs

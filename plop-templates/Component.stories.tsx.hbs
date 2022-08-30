@@ -1,0 +1,15 @@
+import { action } from '@storybook/addon-actions';
+
+import {{ properCase name }} from './{{ properCase name }}';
+
+import type { ComponentMeta, ComponentStoryObj } from '@storybook/react';
+
+export default {
+    title: 'Components/{{ properCase name }}',
+    component: {{ properCase name }},
+    argTypes: {},
+} as ComponentMeta<typeof {{ properCase name }}>;
+
+export const {{ properCase name }}Sample: ComponentStoryObj<typeof {{ properCase name }}> = {
+    args: {},
+};
