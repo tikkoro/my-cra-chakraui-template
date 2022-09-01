@@ -145,4 +145,5 @@ module.exports = {
             },
         },
     },
-}
+    ignorePatterns: ['fileTransform.js', 'cssTransform.js'],
+};
